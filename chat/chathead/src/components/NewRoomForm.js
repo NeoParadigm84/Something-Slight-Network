@@ -1,3 +1,5 @@
+import React from 'react'
+
 class NewRoomForm extends React.Component {
     
     constructor() {
