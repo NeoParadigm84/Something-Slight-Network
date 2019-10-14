@@ -12,7 +12,7 @@ const ArticleSchema = new Schema ({
         type: String,
         required: true
     },
-    //l ink to article
+    //link to article
     link: {
         type:String,
         unique: true,
