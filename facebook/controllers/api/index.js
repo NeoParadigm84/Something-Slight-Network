@@ -12,6 +12,6 @@ router.get('/', function(req, res) {
 });
 
 router.use('/articles', require('./articles'));
-router.use('/notes', require('./notes'));
+
 
 module.exports = router;
