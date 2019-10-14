@@ -18,29 +18,12 @@ const ArticleSchema = new Schema ({
         unique: true,
         required: true
     },
-    // save article or not
-    saved: {
-        type: Boolean,
-        required: true,
-        default: false
-    },
-    //d elete article or not
-    deleted: {
-        type: Boolean,
-        required: true,
-        default: false
-      },
+    
     // date is set when added to database
     date: {
         type: Date,
         default: Date.now
       },
-    // notes is an array of reference ids
-    notes: [{
-        type: Schema.Types.ObjectId,
-        ref: "Note",
-        required: false
-        }]
 
 });
 

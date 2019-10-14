@@ -22,21 +22,11 @@ router.get('/', function(req, res) {
 
 // scrape articles
 router.get('/scrape', function(req, res, next) {
-    // REPLACING https://news.ycombinator.com
-    // NPR https://www.npr.org/sections/news/
-    // MTV http://www.mtv.com/news/
-    // ESPN http://www.espn.com/espn/latestnews
+
     request('http://www.espn.com/espn/latestnews', function(error, response, html) {
         let $ = cheerio.load(html);
         let results = [];
-        // YCOMBINATOR tr.athing td.title
-        // NPR article
-        // ESPN ul.inline-list.indent li a
         $("ul.inline-list.indent li a").each(function(i, e) {
-            // let title = $(this).children('a').text(),
-            // link = $(this).children('a').attr('href'),
-            // let title = $(this).children('.item-info-wrap').children('.item-info').children('.title').children('a').text(),
-            // link = $(this).children('.item-info-wrap').children('.item-info').children('.title').children('a').attr('href'),
             let title = $(this).text(),
             link = $(this).attr('href'),
             single = {};

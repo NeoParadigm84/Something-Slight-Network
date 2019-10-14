@@ -177,16 +177,24 @@
 															<a class="nav-link" href="/api/articles/scrape">ESPN</a>
 														</li>
 														<li class="nav-item">
-															<a class="nav-link" href="/api/articles/scrape">BET</a>
+															<a class="nav-link" href="/api/articles/scrape">NPR</a>
 														</li>
 												</ul>
 											</div>
 											<hr>
 											<ul class="list-unstyled">
-
-												<!-- <li><a href="http://usebootstrap.com/theme/facebook">Dashboard</a></li>
-												<li><a href="http://usebootstrap.com/theme/facebook">Darkside</a></li>
-												<li><a href="http://usebootstrap.com/theme/facebook">Greenfield</a></li> -->
+<!-- //////////////////////////////GEORGE: INSERT CODE HERE TO DISPLAY SCRAPE RESULT///////////////////////////////////////-->
+												<div id="articles">
+													{{#each articles}}
+														<div class="well">
+															<div class="row">
+																<div class="col col-md-8">
+																	<h4><a href="{{this.link}}">{{this.title}}</a></h4>
+																</div>
+															</div>
+														</div>
+													{{/each}}
+												</div>
 											</ul>
 										</div>
 									</div>

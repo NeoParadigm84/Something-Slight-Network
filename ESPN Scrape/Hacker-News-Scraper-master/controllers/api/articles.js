@@ -139,7 +139,7 @@ router.get('/scrape', function(req, res, next) {
                 });
             }
         });
-        console.log(response);
+        // console.log(response);
         next();
     });
 }, function(req, res) {

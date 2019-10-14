@@ -25,7 +25,7 @@ app
     .use(express.static(__dirname + '/public'))
     .engine('handlebars', exphbs({ defaultLayout: 'main' }))
     .set('view engine', 'handlebars')
-    .use(require('./controllers'));
+    .use(require('./controllers'))
 
 // configure mongoose and start the server
 // =============================================================
