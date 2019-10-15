@@ -1,11 +1,10 @@
 {
-  "name": "chathead",
+  "name": "slitechatter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@pusher/chatkit-client-react": "^0.1.2",
-    "pusher": "^3.0.0",
-    "pusher-js": "^5.0.2",
+    "@pusher/chatkit-server": "^2.1.1",
+    "express": "^4.17.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
