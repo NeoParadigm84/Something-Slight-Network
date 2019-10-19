@@ -6,9 +6,10 @@ const express = require('express'),
      
 
 // get all articles from database
-router.get('/', function(req, res) {
+router.get('/articles', function(req, res) {
     Article
         .find({})
+        .limit(7)
         .exec(function(error, docs) {
             if (error) {
                 console.log(error);

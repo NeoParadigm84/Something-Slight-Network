@@ -4,14 +4,18 @@ const express = require('express'),
       router = express.Router(),
       request = require('request'),
       cheerio = require('cheerio'),
-      Article = require('../../models/article'),
-      Note = require('../../models/note');
+      Article = require('../../models/article');
 
 router.get('/', function(req, res) {
-    res.status(200).send('<a href=\'/api/articles/\'>articles</a><br><a href=\'/api/notes/\'>notes</a>');
+    res.status(200).send('<a href=\'/api/articles/\'></a><br><a href=\'/api/notes/\'></a>');
+});
+// NPR articles
+router.get('/', function(req, res) {
+    res.status(200).send('<a href=\'/api/articlesNPR/\'>articlesNPR</a>');
 });
 
-router.use('/articles', require('./articles'));
+router.use(require('./articles'));
+router.use('/articlesNPR', require('./articlesNPR'));
 
 
 module.exports = router;
