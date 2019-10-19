@@ -8,7 +8,7 @@ class App extends Component {
     super()
     this.state = {
       currentUsername: "",
-      currentScreen: "WhatIsYourUserName"
+      currentScreen: "Type User Name to Start Chatting"
     }
     this.onUsernameSubmitted = this.onUsernameSubmitted.bind(this)
   }
@@ -31,7 +31,7 @@ class App extends Component {
   
 
   render() {
-    if (this.state.currentScreen === "WhatIsYourUserName") {
+    if (this.state.currentScreen === "Type User Name to Start Chatting") {
       return <UsernameForm onSubmit={this.onUsernameSubmitted} />
     }
     if (this.state.currentScreen === "ChatScreen") {

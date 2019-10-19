@@ -59,7 +59,7 @@ hr {
     position: absolute;
     right: 0;
     top: 0;
-    background-color:#aba104;
+    background-color:#5AA648;
   
     /* background-image:url('../img/ss.png');
     background-size:cover;
@@ -73,7 +73,7 @@ hr {
 
 .navbar-blue {
     border-width:0;
-	background-color:#aba104;
+	background-color:#5AA648;
     color:#419a1c;
     font-family:arial,sans-serif;
     top:0;
@@ -106,7 +106,9 @@ hr {
 
 #sidebar {
     padding:0px;
-	padding-top:15px;
+  padding-top:15px;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
 }
 
 #sidebar, #sidebar a, #sidebar-footer a {
